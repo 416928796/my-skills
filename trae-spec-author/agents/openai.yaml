@@ -1,0 +1,4 @@
+interface:
+  display_name: "Trae Spec Author"
+  short_description: "Generate Trae-compatible spec bundles without /spec"
+  default_prompt: "Use $trae-spec-author to create a Trae-compatible spec bundle for this change without invoking /spec."

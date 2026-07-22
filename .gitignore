@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# IDE
+.idea/
+
+# 临时文件
+*.tmp
+
+build/
+
+*/cache/
+
+.codex_tmp
+
+# 常见压缩格式
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+*.tar.bz2
+*.tar.xz
+*.gz
+*.bz2
+*.xz
+*.zst
+*.zipx
+*.iso
+*.cab
+*.lzh
+*.lzma
+*.s7z

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Trae Spec TDD"
+  short_description: "Auditable TDD development with Trae spec"
+  default_prompt: "Use $trae-spec-tdd to implement this change through Trae /spec with readable TDD evidence."

@@ -37,7 +37,7 @@ Treat `/spec` and this Skill as mutually exclusive entry points. In this workflo
    ```
 
 8. Execute every behavior change using Red-Green-Refactor. Put new spec-specific tests only in `tdd/tests/`; keep established project tests in their existing directory for regression.
-9. Save compact raw logs in `tdd/evidence/`, update `SUMMARY.md` after every phase, and optionally emit JUnit XML.
+9. Save compact raw logs in `tdd/evidence/` and update `SUMMARY.md` after every phase. Change each traceability row from `Pending` to `Pass` only after its Green and relevant regression evidence pass; use `Blocked` when evidence cannot be completed. Never use ambiguous values such as `Done`.
 10. Run the evidence validator before checking off completion items:
 
    ```powershell
@@ -61,6 +61,8 @@ Treat `/spec` and this Skill as mutually exclusive entry points. In this workflo
 - Start each Chinese test docstring with its trace IDs, following the form `[REQ-001][SCN-001] <Chinese assertion intent>`.
 - Use `pytest -q --tb=short` for Red and `pytest -q --tb=no` for Green/refactor/regression.
 - Never mark a behavior checklist item complete without linked Red, Green, and relevant regression evidence.
+- Treat status maintenance as executable work, not documentation cleanup: every TDD task must include an evidence-closeout subtask that updates links, counts, conclusion, and row status in `SUMMARY.md`.
+- Keep the overall Verdict `IN PROGRESS` while any traceability row is `Pending` or `Blocked`; set it to `PASS` only when every required row is `Pass` and full regression succeeds.
 
 ## Required bundle
 

@@ -52,6 +52,12 @@ def main() -> int:
             errors.append("SUMMARY.md contains unfilled placeholders")
         if "**PASS**" not in summary:
             errors.append("SUMMARY.md verdict is not PASS")
+        if re.search(r"\|\s*Pending\s*\|", summary, re.IGNORECASE):
+            errors.append("SUMMARY.md still contains Pending traceability rows")
+        if re.search(r"\|\s*Blocked\s*\|", summary, re.IGNORECASE):
+            errors.append("SUMMARY.md contains Blocked rows, so overall verdict cannot be PASS")
+        if re.search(r"\|\s*Done\s*\|", summary, re.IGNORECASE):
+            errors.append("SUMMARY.md uses invalid row status Done; use Pass")
         for label in ("Red", "Green", "Affected", "Full"):
             if f"| {label} |" not in summary:
                 errors.append(f"SUMMARY.md missing result row: {label}")

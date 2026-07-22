@@ -19,6 +19,8 @@
 |---|---|---|---|---|
 | <a id="req-001-scn-001"></a>`[REQ-001][SCN-001]` | `{{TEST_NODE}}` | `[log]({{RED_LOG}})` | `[log]({{GREEN_LOG}})` | Pending |
 
+Allowed row statuses: `Pending` (not yet evidenced), `Pass` (Green and relevant regression passed), `Blocked` (cannot complete; explain below). Do not use `Done`.
+
 ## TDD cycle results
 
 | Phase | Exact command | Exit | Passed/failed/error/skipped | Artifact | Conclusion |

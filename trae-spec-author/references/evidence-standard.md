@@ -42,6 +42,10 @@ Keep these sections current:
 5. Affected and full regression results.
 6. Deviations, skipped tests, environment limits, risks, and remaining work.
 
+Use only `Pending`, `Pass`, or `Blocked` in traceability rows. Update the row immediately after its Green and relevant regression run. `Pass` requires linked passing evidence; `Blocked` requires a reason; `Pending` means work remains. Never use `Done`.
+
+The overall Verdict must remain `IN PROGRESS` while any required row is `Pending` or `Blocked`. Use overall `PASS` only when every required row is `Pass` and full regression passed.
+
 Use relative Markdown links. Redact tokens, credentials, authorization headers, personal data, and sensitive payloads. Do not dump repetitive PASSED lines, full HTTP bodies, binary output, or caches.
 
 ## Checklist gate
